@@ -47,7 +47,8 @@ section.col-md-3.card-wrapper.profile-card-wrapper.affix
       if resume.basics.computed_location
         +profile_card_detail("icon-location", resume.basics.computed_location)
       if resume.basics.phone
-        +profile_card_detail("icon-phone", resume.basics.phone, "telephone")
+        +profile_card_detail("icon-phone")
+          a.link-disguise(href="tel:" + resume.basics.phone, itemprop="telephone")= resume.basics.phone
       if resume.basics.qq
         +profile_card_chinese_detail("icon-qq", resume.basics.qq, "QQ")
       if resume.basics.email
