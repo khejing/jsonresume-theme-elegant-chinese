@@ -10,8 +10,8 @@ mixin profile_card_detail(icon, info, itemprop, icon_title)
 
 mixin profile_card_chinese_detail(icon, info, itemprop, icon_title)
   .detail
-    span.iconfont(title=icon_title)
-      i.iconfont.fs-lg(class=icon)
+    span.icon(title=icon_title)
+      i.icon.fs-lg.iconfont(class=icon)
     span.info(itemprop=itemprop)
       if block
         block
