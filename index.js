@@ -4,7 +4,7 @@ var _ = require('underscore');
 var utils = require('jsonresume-themeutils');
 
 utils.setConfig({
-    date_format: 'MMM, YYYY'
+    date_format: 'YYYY年MMM'
 });
 
 function interpolate(object, keyPath) {
