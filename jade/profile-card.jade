@@ -8,6 +8,16 @@ mixin profile_card_detail(icon, info, itemprop, icon_title)
       else
         |#{info}
 
+mixin profile_card_chinese_detail(icon, info, itemprop, icon_title)
+  .detail
+    span.iconfont(title=icon_title)
+      i.iconfont.fs-lg(class=icon)
+    span.info(itemprop=itemprop)
+      if block
+        block
+      else
+        |#{info}
+
 mixin render_links(profiles)
   - each profile in profiles
     a.fs-2x.social-link(
@@ -38,6 +48,8 @@ section.col-md-3.card-wrapper.profile-card-wrapper.affix
         +profile_card_detail("icon-location", resume.basics.computed_location)
       if resume.basics.phone
         +profile_card_detail("icon-phone", resume.basics.phone, "telephone")
+      if resume.basics.qq
+        +profile_card_chinese_detail("icon-QQ", resume.basics.QQ, "QQ")
       if resume.basics.email
         +profile_card_detail("icon-mail")
           a.link-disguise(href="mailto:" + resume.basics.email, itemprop="email")= resume.basics.email
