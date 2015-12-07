@@ -59,6 +59,9 @@ section.col-md-3.card-wrapper.profile-card-wrapper.affix
           a(href=resume.basics.website, target="_blank")= resume.basics.website
       if resume.basics.languages
         +profile_card_detail('icon-language', resume.basics.languages, null, 'Languages I speak')
+      if resume.basics.download
+        +profile_card_chinese_detail('icon-download')
+          a(href=resume.basics.download)= "下载此简历的PDF版本"
 
     hr
 
