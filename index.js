@@ -118,7 +118,7 @@ function render(resume) {
         var date = award.date;
 
         if (date) {
-            award.date = utils.getFormattedDate(date, 'MMM DD, YYYY');
+            award.date = utils.getFormattedDate(date);
         }
     });
 
